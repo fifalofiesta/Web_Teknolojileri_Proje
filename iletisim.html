@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Yasin Ünan - Kişişel Websitesi</title>
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<link href="style.css" rel="stylesheet">
+	<script src="formdogrula.js" type="text/javascript"></script>
+</head>
+<body>
+	<!--- navigationbar kısmı -->
+	<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="hakkimda.html">Yasin Ünan</a> 
+
+			<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="hakkimda.html">Hakkımda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sehrim.html">Şehrim</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="iletisim.html">İletişim</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--- navigationbar sonu -->
+
+	<div class="jumbotron">
+		<div class="container">
+			<h5>İletişim için alttaki alanları doldurunuz</h5>
+			<hr>
+			<form name="formisim" action="formgonder.php"  onsubmit="return dogrula(this)" method="post">
+				<div class="table">
+						<table>
+								<tr>
+									<td>Ad</td>
+									<td><input type="text" name="adi"></td>
+								</tr>
+								<tr>
+									<td>Soyad</td>
+									<td><input type="text" name="soyadi"> </td>
+								</tr>
+								<tr>
+									<td>Cinsiyet</td>
+									<td> <input type="radio" name="cinsiyet" value="Erkek" checked>Erkek
+											<input type="radio" name="cinsiyet" value="Bayan" >Bayan
+									</td>
+								<tr>
+									<td>E-mail</td>
+									<td><input type="text" name="email" value=""></td>
+								</tr>
+								
+								<tr>
+									<td>Telefon Numarası</td>
+									<td><input type="text" id="telefonnumarasi" name="telefonnumarasi"></td>
+								</tr>
+								</tr>
+								<tr>
+									<td>Uyruk</td>
+									<td> <input type="radio" name="uyruk" value="Türk" checked>Türk
+											<input type="radio" name="uyruk" value="Diğer">Diğer								
+									</td>	
+								</tr>
+								<tr>
+									<td>Eğitim Durumunuz</td>
+									<td>
+									<input type="radio" name="egitim" value="İlkokul" checked>Hiçbiri
+									<input type="radio" name="egitim" value="İlkokul">İlkokul
+									<input type="radio" name="egitim" value="Lise">Lise
+									<input type="radio" name="egitim" value="Lisans">Lisans
+									<input type="radio" name="egitim" value="Yüksek Lisans">Yüksek Lisans
+									<input type="radio" name="egitim" value="Doktora">Doktora
+								</tr>
+								<tr>
+									<td>Kan Grubu</td>
+									<td>	<select name="kangrubu">
+											<option value="A+">A Rh(+) </option>
+											<option value="A-" >A Rh(-)</option>
+											<option value="B+">B Rh(+) </option>
+											<option value="B-">B Rh(-) </option>
+											<option value="AB+" selected>AB Rh(+) </option>
+											<option value="AB-" >AB Rh(-)</option>
+											<option value="0+">0 Rh(+) </option>
+											<option value="0-">0 Rh(-) </option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Açıklama</td>
+									<td> <textarea name="aciklama" rows="5" cols="30"> </textarea></td> 
+								</tr>
+								<tr style="text-align:center">
+									<td colspan="2">
+									<button type="submit" value="Gönder">Gönder</button>
+									<button type="reset" value="Temizle">Temizle</button>
+									</td>
+								</tr>
+							</table>
+
+				</div>
+					
+						
+				</form>
+		</div>
+	</div>
+
+
+	<!--- footer basi -->
+	<footer>
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<h4>VİZYON SÖZ</h4>
+					<p>"Geçmişten öğren, bugün için yaşa, yarın için umut et."</p>
+					<p>&copy; Copyright2020 YasinÜnan</p>					
+				</div>
+				<div class="col-md-4">
+					<h4>İLETİŞİM BİLGİLERİ</h4>
+					<strong>İletişim Bilgileri</strong>
+					<p>+90 506 726 7406<br>
+					yasin.unan@ogr.sakarya.edu.tr</p>					
+				</div>
+				<div class="col-md-4">
+					<h4>İLETİŞİM</h4>
+					<a class="btn btn-outline-light btn-lg" href="iletisim.html">iletişim için tıklayın</a>					
+				</div>
+			</div><!--- satir sonu -->
+		</div> <!--- container sonu -->
+	</footer>
+	<!--- footer sonu -->
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>
